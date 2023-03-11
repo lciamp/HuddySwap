@@ -1,9 +1,9 @@
 import React from 'react'
-import PageButton from './PageButton'
+import PageButton from './PageButton.jsx'
 
 const ConnectButton = props => {
   const { isConnected, signerAddress, getSigner, provider } = props
-  const displayAddress = `${signerAddress?.substring(0,10)}...`
+  const displayAddress = `${signerAddress?.substring(0,5)}...${signerAddress?.substring(signerAddress.length -5)}`
 
   return (
     <>

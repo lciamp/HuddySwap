@@ -1,8 +1,9 @@
 import './App.css';
 import { useState, useEffect} from 'react';
 import { ethers } from 'ethers';
+
 import PageButton from './components/PageButton';
-import ConnectButton from "./ConnectButton";
+import ConnectButton from './components/ConnectButton';
 
 function App() {
 
@@ -26,8 +27,8 @@ function App() {
 
   // functions for connecting to the wallet
   const getSigner = async provider => {
-    provider.send("eth_RequestAccounts", [])
-    const signer = provider.getSigner()
+    provider.send("eth_requestAccounts", []);
+    const signer = provider.getSigner();
     setSigner(signer)
   }
 
@@ -72,6 +73,10 @@ function App() {
           </div>
         </div>
       </div>
+
+    
+
+
 
     </div>
   );

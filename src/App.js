@@ -56,6 +56,20 @@ function App() {
           <PageButton name={"Vote"} />
           <PageButton name={"Charts"} />
         </div>
+
+        <div className="rightNav">
+          <div className="connectButtonContainer">
+            <ConnectButton
+              provider={provider}
+              isConnected={isConnected}
+              signerAddress={signerAddress}
+              getSigner={getSigner}
+            >
+          </div>
+          <div className="my-2 buttonContainer">
+            <PageButton name={"..."} isBold={true} />
+          </div>
+        </div>
       </div>
 
     </div>

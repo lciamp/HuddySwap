@@ -1,5 +1,6 @@
 import React from 'react'
 
+// note: these buttons are for display only
 const PageButton = props => {
     return (
         <div className="btn">

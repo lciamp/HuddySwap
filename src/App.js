@@ -2,6 +2,7 @@ import './App.css';
 import { useState, useEffect} from 'react';
 import { ethers } from 'ethers';
 import PageButton from './components/PageButton';
+import ConnectButton from "./ConnectButton";
 
 function App() {
 
@@ -64,7 +65,7 @@ function App() {
               isConnected={isConnected}
               signerAddress={signerAddress}
               getSigner={getSigner}
-            >
+            />
           </div>
           <div className="my-2 buttonContainer">
             <PageButton name={"..."} isBold={true} />

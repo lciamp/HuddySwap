@@ -1,6 +1,7 @@
 import './App.css';
 import { useState, useEffect} from 'react';
 import { ethers } from 'ethers';
+import PageButton from './components/PageButton';
 
 function App() {
 
@@ -11,7 +12,7 @@ function App() {
   const [signer, setSigner] = useState(undefined)
   
   // to check what is in the signers wallet
-  const [signerAddress, setSigner] = useState(undefined)
+  const [signerAddress, setSignerAddress] = useState(undefined)
 
   // function for setting the provider
   useEffect(() => {
@@ -48,6 +49,14 @@ function App() {
 
   return (
     <div className="App">
+      <div className="appNav">
+        <div className="my-2 buttonContainer buttonContainerTop">
+          <PageButton name={"Swap"} isBold={true} />
+          <PageButton name={"Pool"} />
+          <PageButton name={"Vote"} />
+          <PageButton name={"Charts"} />
+        </div>
+      </div>
 
     </div>
   );

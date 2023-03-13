@@ -50,6 +50,7 @@ function App() {
   }
 
   return (
+    // main buttons, on swap is gonna work, it for looks.
     <div className="App">
       <div className="appNav">
         <div className="my-2 buttonContainer buttonContainerTop">
@@ -58,7 +59,7 @@ function App() {
           <PageButton name={"Vote"} />
           <PageButton name={"Charts"} />
         </div>
-
+        {/* connect button */}
         <div className="rightNav">
           <div className="connectButtonContainer">
             <ConnectButton
@@ -73,10 +74,16 @@ function App() {
           </div>
         </div>
       </div>
-
-    
-
-
+    {/* the swap container */}
+    <div className="appBody">
+      <div className="swapContainer">
+        <div className="swapHeader">
+          <span className="swapText">
+            huddyswap
+          </span>
+        </div>
+      </div>
+    </div>
 
     </div>
   );

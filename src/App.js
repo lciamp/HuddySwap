@@ -83,6 +83,14 @@ function App() {
           <span className="gearContainer">
             <GearFill />
           </span>
+          {showModal && (
+            <ConfigModal 
+              onClose={() => setShowModal(false)}
+              setDeadlineMinutes={setDeadlineMinutes}
+              deadlineMinutes={deadlineMinutes}
+              setSlippageAmmount={setSlippageAmmount}
+              slippageAmmount={slippageAmmount}/>
+          )}
         </div>
       </div>
     </div>

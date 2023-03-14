@@ -1,6 +1,7 @@
 import './App.css';
 import { useState, useEffect} from 'react';
 import { ethers } from 'ethers';
+import { GearFill } from 'react-bootstrap-icons';
 
 import PageButton from './components/PageButton';
 import ConnectButton from './components/ConnectButton';
@@ -78,8 +79,9 @@ function App() {
     <div className="appBody">
       <div className="swapContainer">
         <div className="swapHeader">
-          <span className="swapText">
-            huddyswap
+          <span className="swapText">huddyswap</span>
+          <span className="gearContainer">
+            <GearFill />
           </span>
         </div>
       </div>

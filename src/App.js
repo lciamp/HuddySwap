@@ -5,6 +5,7 @@ import { GearFill } from 'react-bootstrap-icons';
 
 import PageButton from './components/PageButton';
 import ConnectButton from './components/ConnectButton';
+import ConfigModal from './components/ConfigModal';
 
 function App() {
 
@@ -16,6 +17,12 @@ function App() {
   
   // to check what is in the signers wallet
   const [signerAddress, setSignerAddress] = useState(undefined)
+
+  // set slippage amount and deadline minutes for swap
+  const [slippageAmount, setSlippageAmount] = useState(undefined)
+  const [deadlineMinutes, setDeadlineMinutes] = useState(undefined)
+
+  const [showModal, setShowModal] = useState(undefined)
 
   // function for setting the provider
   useEffect(() => {
@@ -80,7 +87,7 @@ function App() {
       <div className="swapContainer">
         <div className="swapHeader">
           <span className="swapText">huddyswap</span>
-          <span className="gearContainer">
+          <span className="gearContainer" onClick={() => setShowModal(true)}>
             <GearFill />
           </span>
           {showModal && (
@@ -88,13 +95,12 @@ function App() {
               onClose={() => setShowModal(false)}
               setDeadlineMinutes={setDeadlineMinutes}
               deadlineMinutes={deadlineMinutes}
-              setSlippageAmmount={setSlippageAmmount}
-              slippageAmmount={slippageAmmount}/>
+              setSlippageAmount={setSlippageAmount}
+              slippageAmmount={slippageAmount}/>
           )}
         </div>
       </div>
     </div>
-
     </div>
   );
 }

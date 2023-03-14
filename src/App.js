@@ -32,7 +32,7 @@ function App() {
     setSigner(signer)
   }
 
-  // check it wallet is connected
+  // check if wallet is connected
   const isConnected = () => signer !== undefined 
 
   // get the wallet address

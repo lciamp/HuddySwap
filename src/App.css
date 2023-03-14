@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #f8b54f;
+  background-color: #c37500;
   min-height: 100vh;
 }
 
@@ -38,7 +38,7 @@ body {
 }
 
 .connectButton {
-  background-color: rgb(253, 234, 241) !important;
+  background-color: rgb(250, 233, 204) !important;
   border-radius: 16px !important;
   border: 1px solid #fff !important;
   color: rgb(186, 62, 0) !important;

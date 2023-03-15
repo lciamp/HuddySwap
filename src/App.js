@@ -96,7 +96,7 @@ function App() {
               setDeadlineMinutes={setDeadlineMinutes}
               deadlineMinutes={deadlineMinutes}
               setSlippageAmount={setSlippageAmount}
-              slippageAmmount={slippageAmount}/>
+              slippageAmount={slippageAmount}/>
           )}
         </div>
       </div>

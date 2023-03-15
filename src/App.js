@@ -19,8 +19,8 @@ function App() {
   const [signerAddress, setSignerAddress] = useState(undefined)
 
   // set slippage amount and deadline minutes for swap
-  const [slippageAmount, setSlippageAmount] = useState(undefined)
-  const [deadlineMinutes, setDeadlineMinutes] = useState(undefined)
+  const [slippageAmount, setSlippageAmount] = useState(2)
+  const [deadlineMinutes, setDeadlineMinutes] = useState(10)
 
   const [showModal, setShowModal] = useState(undefined)
 

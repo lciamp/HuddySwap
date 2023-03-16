@@ -25,6 +25,18 @@ function App() {
 
   const [showModal, setShowModal] = useState(undefined)
 
+  // props for currency field component
+  const [inputAmount, setInputAmount] = useState(undefined)
+  const [outputAmount, setOutputAmount] = useState(undefined)
+  const [transaction, setTransaction] = useState(undefined)
+  const [loading, setLoading] = useState(undefined)
+  const [ratio, setRatio] = useState(undefined)
+
+  // props for weth and uni contracts
+  const [wethContract, setWethContract] = useState(undefined)
+  const [uniContract, setUniContract] = useState(undefined)
+  
+
   // function for setting the provider
   useEffect(() => {
     const onLoad = async () => {

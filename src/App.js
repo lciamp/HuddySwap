@@ -7,6 +7,7 @@ import PageButton from './components/PageButton';
 import ConnectButton from './components/ConnectButton';
 import ConfigModal from './components/ConfigModal';
 import { BeatLoader } from 'react-spinners';
+import { getWethContract, getUniContract } from './AlphaRouterService';
 
 function App() {
 

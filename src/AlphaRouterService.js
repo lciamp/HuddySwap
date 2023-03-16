@@ -1,5 +1,5 @@
 const  { AlphaRouter } = require('@uniswap/smart-order-router')
-const { Token, CurrencyAmount, TradeType, Percent, CurrencyAmount } = require('@uniswap/sdk-core')
+const { Token, CurrencyAmount, TradeType, Percent } = require('@uniswap/sdk-core')
 const { ethers, BigNumber } = require('ethers')
 const JSBI = require('jsbi')
 const ERC20ABI = require('./abi.json')
@@ -42,6 +42,7 @@ const UNI  = new Token(chainId, address1, decimals1, symbol1, name1)
 export const getWethContract = () => new ethers.Contract(address0, ERC20ABI, web3Provider)
 export const getUniContract = () => new ethers.Contract(address1, ERC20ABI, web3Provider)
 
+// todo: fix uni connection
 // get current UNI price
 export const getPrice = async (inputAmount, slippageAmount, deadline, walletAddress) => {
     const percentSlippage = new Percent(slippageAmount, 100)
@@ -49,7 +50,7 @@ export const getPrice = async (inputAmount, slippageAmount, deadline, walletAddr
     const CurrencyAmount = CurrencyAmount.fromRawAmmount(WETH, JSBI.BigInt(wei))
 
     const route = await router.route(
-        currencyAmmount,
+        CurrencyAmount,
         UNI,
         TradeType.EXACT_INPUT,
         {
@@ -77,4 +78,20 @@ export const getPrice = async (inputAmount, slippageAmount, deadline, walletAddr
         quoteAmountOut,
         ratio
     ]
+}
+
+// function for the swap
+export const runSwap = async (transaction, signer) => {
+    // allow uni to access tokens in your wallet
+    const approvalAmount = ethers.utils.parseUnits('10', 18).toString()
+    const contract0 = getWethContract()
+
+    // think of signer as wallet
+    await contract0.connect(signer).approve(
+        V3_SWAP_ROUTER_ADDRESS,
+        approvalAmount
+    )
+
+    // send off for the swap
+    signer.sendTransaction(transaction)
 }

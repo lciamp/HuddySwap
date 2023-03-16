@@ -6,8 +6,10 @@ import { GearFill } from 'react-bootstrap-icons';
 import PageButton from './components/PageButton';
 import ConnectButton from './components/ConnectButton';
 import ConfigModal from './components/ConfigModal';
+import CurrencyField from './components/CurrencyField';
+
 import { BeatLoader } from 'react-spinners';
-import { getWethContract, getUniContract } from './AlphaRouterService';
+import { getWethContract, getUniContract, getPrice, runSwap } from './AlphaRouterService';
 
 function App() {
 
@@ -84,8 +86,27 @@ function App() {
       })
   }
 
+  // get wallet address if not connected
   if (signer !== undefined){
     getWalletAddress()
+  }
+
+  const getSwapPrice = (inputAmount) => {
+    setLoading(true)
+    setInputAmount(inputAmount)
+
+    const swap = getPrice(
+      inputAmount,
+      slippageAmount,
+      // calculate deadline:
+      Math.floor(Date.now()/1000 + (deadlineMinutes * 60)),
+      signerAddress
+    ).then(data => {
+      setTransaction(data[0])
+      setOutputAmount(data[1])
+      setRatio(data[2])
+      setLoading(false)
+    })
   }
 
   return (

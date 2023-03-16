@@ -12,7 +12,7 @@ const REACT_APP_INFURA_URL_TESTNET = process.env.REACT_APP_INFURA_URL_TESTNET
 
 // set chain id for Ethereum's Ropsten Testnet
 // todo: switch to Kiln or Goerli
-const chainId = 3
+const chainId = 5
 
 const web3Provider = new ethers.providers.JsonRpcProvider(REACT_APP_INFURA_URL_TESTNET)
 

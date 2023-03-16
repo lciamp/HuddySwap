@@ -32,10 +32,11 @@ function App() {
   const [loading, setLoading] = useState(undefined)
   const [ratio, setRatio] = useState(undefined)
 
-  // props for weth and uni contracts
+  // props for weth and uni 
   const [wethContract, setWethContract] = useState(undefined)
   const [uniContract, setUniContract] = useState(undefined)
-  
+  const [wethAmount, setWethAmount] = useState(undefined)
+  const [uniAmount, setUniAmount] = useState(undefined)
 
   // function for setting the provider
   useEffect(() => {
@@ -63,7 +64,15 @@ function App() {
         setSignerAddress(address)
 
         // todo: connect weth with uni contracts
-      } )
+        wethContract.balanceOf(address)
+          .then(res => {
+            setWethAmount(Number(ethers.utils.formatEther(res)))
+          })
+        uniContract.balanceOf(address)
+        .then(res => {
+          setUniAmount(Number(ethers.utils.formatEther(res)))
+        })
+      })
   }
 
   if (signer !== undefined){

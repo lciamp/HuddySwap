@@ -43,6 +43,14 @@ function App() {
     const onLoad = async () => {
       const provider = await new ethers.providers.Web3Provider(window.ethereum)
       setProvider(provider)
+      
+      // get weth contract
+      const wethContract = getWethContract()
+      setWethContract(wethContract)
+
+      // get uni contract
+      const uniContract = getWethContract()
+      setUniContract(uniContract)
     }
     onLoad()
   }, [])

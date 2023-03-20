@@ -11,8 +11,8 @@ const V3_SWAP_ROUTER_ADDRESS = '0xe592427a0aece92de3edee1f18e0157c05861564'
 const REACT_APP_INFURA_URL_TESTNET = process.env.REACT_APP_INFURA_URL_TESTNET
 
 // set chain id for Ethereum's Ropsten Testnet
-// todo: switch to Kiln or Goerli network - DONE
-const chainId = 5
+// todo: switch to Kiln or Goerli network - DONE (Goerli = 6)
+const chainId = 6
 
 // create provider to talk with infura
 const web3Provider = new ethers.providers.JsonRpcProvider(REACT_APP_INFURA_URL_TESTNET)

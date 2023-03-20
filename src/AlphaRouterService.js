@@ -5,7 +5,7 @@ const JSBI = require('jsbi')
 const ERC20ABI = require('./abi.json')
 
 // swap router wallet address
-const V3_SWAP_ROUTER_ADDRESS = '0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45'
+const V3_SWAP_ROUTER_ADDRESS = '0xe592427a0aece92de3edee1f18e0157c05861564'
 
 // don't need to explicitly use env lib, just add REACT_APP_
 const REACT_APP_INFURA_URL_TESTNET = process.env.REACT_APP_INFURA_URL_TESTNET

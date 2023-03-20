@@ -110,7 +110,7 @@ function App() {
   }
 
   return (
-    // main buttons, on swap is gonna work, it for looks.
+    // main buttons, on swap is gonna work, rest are for looks.
     <div className="App">
       <div className="appNav">
         <div className="my-2 buttonContainer buttonContainerTop">
@@ -167,11 +167,8 @@ function App() {
               balance={wethAmount} 
               spinner={BeatLoader}
               loading={loading} />
-
           </div>
-
-
-
+          
         </div>
       </div>
     </div>

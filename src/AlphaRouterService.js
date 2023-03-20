@@ -47,10 +47,10 @@ export const getUniContract = () => new ethers.Contract(address1, ERC20ABI, web3
 export const getPrice = async (inputAmount, slippageAmount, deadline, walletAddress) => {
     const percentSlippage = new Percent(slippageAmount, 100)
     const wei = ethers.utils.parseUnits(inputAmount.toString(), decimals0)
-    const CurrencyAmount = CurrencyAmount.fromRawAmmount(WETH, JSBI.BigInt(wei))
+    const currencyAmount = CurrencyAmount.fromRawAmount(WETH, JSBI.BigInt(wei))
 
     const route = await router.route(
-        CurrencyAmount,
+        currencyAmount,
         UNI,
         TradeType.EXACT_INPUT,
         {

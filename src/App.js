@@ -92,7 +92,9 @@ function App() {
   }
 
   const getSwapPrice = (inputAmount) => {
+    // display spinner
     setLoading(true)
+    // set input amount
     setInputAmount(inputAmount)
 
     const swap = getPrice(
@@ -164,11 +166,11 @@ function App() {
               tokenName="UNI"
               value={outputAmount}
               signer={signer}
-              balance={wethAmount} 
+              balance={uniAmount} 
               spinner={BeatLoader}
               loading={loading} />
           </div>
-          
+
         </div>
       </div>
     </div>

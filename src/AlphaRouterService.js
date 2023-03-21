@@ -11,8 +11,8 @@ const V3_SWAP_ROUTER_ADDRESS = '0xe592427a0aece92de3edee1f18e0157c05861564'
 const REACT_APP_INFURA_URL_TESTNET = process.env.REACT_APP_INFURA_URL_TESTNET
 
 // set chain id for Ethereum's Ropsten Testnet
-// todo: switch to Kiln or Goerli network - DONE (Goerli = 6)
-const chainId = 6
+// todo: switch to Kiln or Goerli network - DONE (Goerli = 5)
+const chainId = 5
 
 // create provider to talk with infura
 const web3Provider = new ethers.providers.JsonRpcProvider(REACT_APP_INFURA_URL_TESTNET)
@@ -32,7 +32,7 @@ const name1     = 'Uniswap Token'
 const symbol1   = 'UNI'
 const decimals1 = 18
 // account 2 in metamask
-const address1  = '0xb241033041D5bc5e68d7BFA65e024030a95A23de'
+const address1  = '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984'
 
 // make some tokens
 const WETH = new Token(chainId, address0, decimals0, symbol0, name0)

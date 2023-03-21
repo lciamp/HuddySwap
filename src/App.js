@@ -179,6 +179,23 @@ function App() {
             )}
           </div>
 
+          <div className='swapButtonContainer'>
+            {isConnected() ? (
+              <div 
+                onClick={() => runSwap(transaction, signer)}
+                className='swapButton'
+              >
+                Swap
+              </div>
+            ) : (
+              <div
+                onClick={() => getSigner(provider)}
+                >
+                Connect Wellet
+              </div>
+            )}
+          </div>
+
         </div>
       </div>
     </div>

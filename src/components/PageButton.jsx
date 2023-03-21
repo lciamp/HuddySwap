@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 // note: these buttons are for display only
 const PageButton = props => {

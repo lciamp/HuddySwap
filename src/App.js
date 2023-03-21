@@ -171,6 +171,14 @@ function App() {
               loading={loading} />
           </div>
 
+          <div className='ratioContainer'>
+            { ratio && (
+              <>
+                {`1 UNI = ${ratio}) WETH`}
+              </>
+            )}
+          </div>
+
         </div>
       </div>
     </div>

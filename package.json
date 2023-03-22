@@ -8,10 +8,11 @@
     "@testing-library/user-event": "^13.5.0",
     "@uniswap/sdk": "^3.0.3",
     "@uniswap/sdk-core": "^3.2.2",
-    "@uniswap/smart-order-router": "^2.0.1",
-    "@uniswap/v3-sdk": "^2.0.1",
+    "@uniswap/smart-order-router": "^2.10.2",
+    "@uniswap/v3-sdk": "^2.0.2",
     "bootstrap": "^5.2.3",
-    "ethers": "5.6.9",
+    "ethers": "^5.6.9",
+    "hardhat": "^2.13.0",
     "jsbi": "^3.2.5",
     "react": "^18.2.0",
     "react-bootstrap-icons": "^1.10.2",
@@ -46,7 +47,6 @@
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lciamp/huddyswap.git"
@@ -57,5 +57,8 @@
   "bugs": {
     "url": "https://github.com/lciamp/huddyswap/issues"
   },
-  "homepage": "https://github.com/lciamp/huddyswap#readme"
+  "homepage": "https://github.com/lciamp/huddyswap#readme",
+  "devDependencies": {
+    "mocha": "^10.2.0"
+  }
 }

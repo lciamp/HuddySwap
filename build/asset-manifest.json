@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/lciamp/huddyswap/static/css/main.56f2c90e.css",
+    "main.js": "/lciamp/huddyswap/static/js/main.663cd68f.js",
+    "index.html": "/lciamp/huddyswap/index.html",
+    "main.56f2c90e.css.map": "/lciamp/huddyswap/static/css/main.56f2c90e.css.map",
+    "main.663cd68f.js.map": "/lciamp/huddyswap/static/js/main.663cd68f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.56f2c90e.css",
+    "static/js/main.663cd68f.js"
+  ]
+}

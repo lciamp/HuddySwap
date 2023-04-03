@@ -9,7 +9,23 @@ import ConfigModal from './components/ConfigModal';
 import CurrencyField from './components/CurrencyField';
 
 import { BeatLoader } from 'react-spinners';
-import { getWethContract, getUniContract, getPrice, runSwap } from './AlphaRouterService';
+import { getWethContract, getUniContract, getPrice, runSwap } from './AlphaRouterService'
+
+
+useEffect(() => {
+  const onLoad = async () => {
+    const provider = await new ethers.providers.Web3Provider(window.ethereum)
+    setProvider(provider)
+
+    const wethContract = getWethContract()
+    setWethContract(wethContract)
+
+    const uniContract = getUniContract()
+    setUniContract(uniContract)
+  }
+  onLoad()
+}, [])
+
 
 function App() {
 
@@ -100,7 +116,6 @@ function App() {
     const swap = getPrice(
       inputAmount,
       slippageAmount,
-      // calculate deadline:
       Math.floor(Date.now()/1000 + (deadlineMinutes * 60)),
       signerAddress
     ).then(data => {
